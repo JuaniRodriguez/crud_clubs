@@ -111,17 +111,13 @@ app.get('/form',(req,res)=> {
 app.post('/form', upload.single('uploadedImage'),(req,res)=> {
   const equipos=JSON.parse(fs.readFileSync('./data/equipos.db.json'));
   const checkingId=checkId(equipos);
-  console.log(checkingId)
   if(checkingId.find(el=>el==req.body.id)!==undefined) {
-    console.log("hay uno igual")
     res.render('form', {
       layout:'ui',
       data: {
         error:`El id ${req.body.id} ya existe`
       }
-
     })
-     
   } else {
   equipos.push(newTeam(req.body,(req.file!==undefined) ? req.file.filename : "crest"));
   fs.writeFileSync('./data/equipos.db.json',JSON.stringify(equipos))
@@ -171,7 +167,3 @@ app.post('/:tla/edit', upload.single('uploadedImage'),(req,res)=> {
 
 })
 
-//ver como se van agregando y eliminando los .json
-//agregar que no se pueda agregar un id si ya hay un equipo existente con ese id.
-//home button
-//antes de upload poner json original y eliminar imagenes de upload, y dejar json de equipos originales
