@@ -1,0 +1,11 @@
+{{#each players as |player|}}
+  <tr>
+    <!--<td>{{player.name}}</td>-->
+    <!--<td>{{player.position}}</td>-->
+    <!--{{#if player.countryOfBirth}} <td>{{player.countryOfBirth}}</td> {{else}} <td>--</td> {{/if}}-->
+    <!--<td>{{player.countryOfBirth}}</td>  -->
+    {{#if (isNotNull player.name)}}<td class="text-center">{{player.name}}</td> {{else}}<td>-</td>{{/if}}
+    {{#if (isNotNull player.position)}}<td class="text-center">{{player.position}}</td> {{else}}<td>-</td>{{/if}}
+    {{#if (isNotNull player.countryOfBirth)}}<td class="text-center">{{player.countryOfBirth}}</td> {{else}}<td>-</td>{{/if}}
+  </tr>
+{{/each}}

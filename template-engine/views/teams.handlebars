@@ -1,0 +1,27 @@
+<div class="container">
+    <h1 class="text-center titulo">Premier League</h1>
+</div>
+
+<div class=" container d-flex justify-content-evenly">
+    <h4 class="p-2">Cantidad de equipos: {{equipos.length}}</h4>
+    <a href="/form" class=" btn btn-primary" id="agregar">Agregar</a>
+</div>
+
+
+<div class="container">
+    <div class="row d-flex justify-content-center">
+        <div class="col-md-10">
+            <table class="table table-bordered table-hover table-success border-light">
+                <tr>    
+                    <th scope="col" class="text-center col-sm-5">Nombre Equipo</th>
+                    <th scope="col" class="text-center col-sm-2">Pais</th>
+                    <th scope="col" class="text-center col-sm-5">Accion</th>
+                </tr>
+    
+                {{>navegacion teams=equipos}}
+
+            </table>
+        </div>
+    </div>
+
+</div>

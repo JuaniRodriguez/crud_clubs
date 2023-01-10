@@ -1,0 +1,98 @@
+<!--enctype="multipart/form-data"-->
+<!-- enctype="multipart/form-data" es lo que nos permite subir un archivo al servidor -->
+
+{{#if data.error}}
+  <div class="alert alert-primary" role="alert">
+    {{data.error}}
+  </div>
+{{/if}}
+
+<div class="container">
+  <form class="row" action="/form" method="POST" enctype="multipart/form-data">
+
+    <div class="col-6 mb-3">
+        <label for="inputEmail3" class="form-label text-center">ID</label>
+        <input type="number" class="form-control" name="id" id="inputEmail3">
+    </div>
+    <div class="col-6 mb-3">
+        <label for="inputPassword3" class="form-label text-center">AREA</label>
+        <div class="row">
+          <div class="col">
+            <input type="number" class="form-control" name="areaId" placeholder="id" id="inputEmail3">
+          </div>
+          <div class="col">
+            <input type="text" class="form-control" name="areaName" placeholder="name" id="inputPassword3">
+          </div>
+        </div>
+    </div>  
+
+    <div class="col-6 mb-3">
+      <label for="inputEmail3" class="form-label text-center">NAME</label>
+      <input type="text" class="form-control" name="name" id="inputEmail3" required>
+    </div>
+    <div class="col-6 mb-3">
+      <label for="inputEmail3" class="form-label text-center">SHORTNAME</label>
+      <input type="text" class="form-control" name="shortName" id="inputEmail3">
+    </div>
+
+    <div class="col-6 mb-3">
+      <div class="row">
+        <div class="col-2">
+          <label for="inputEmail3" class="form-label text-center">TLA</label>
+          <input type="text" class="form-control" name="tla" id="inputEmail3" required>
+        </div>
+        <div class="col">
+          <label for="inputEmail3" class="form-label text-center">UPLOAD IMAGE</label>
+          <input type="file" class="form-control" name="uploadedImage" id="inputEmail3">
+        </div>
+      </div>
+    </div>
+    <div class="col-6 mb-3">
+      <label for="inputEmail3" class="form-label text-center">IMAGE URL</label>
+      <input type="text" class="form-control" placeholder="URL" name="urlImage" id="inputEmail3">
+    </div>
+
+    <div class="col-6 mb-3">
+      <label for="inputEmail3" class="form-label text-center">ADDRESS</label>
+      <input type="text" class="form-control" name="address" id="inputEmail3">
+    </div>
+    <div class="col-6 mb-3">
+      <label for="inputEmail3" class="form-label text-center">PHONE</label>
+      <input type="text" class="form-control" name="phone" id="inputEmail3">
+    </div>
+    
+    <div class="col-6 mb-3">
+      <label for="inputEmail3" class="form-label text-center">WEBSITE</label>
+      <input type="text" class="form-control" name="website" id="inputEmail3">
+    </div>
+    <div class="col-6 mb-3">
+      <label for="inputEmail3" class="form-label text-center">EMAIL</label>
+      <input type="email" class="form-control" name="email" id="inputEmail3">
+    </div>
+
+    <div class="col-6 mb-3">
+      <label for="inputEmail3" class="form-label text-center">FOUNDED</label>
+      <input type="number" class="form-control" name="founded" id="inputEmail3">
+    </div>
+    <div class="col-6 mb-3">
+      <label for="inputEmail3" class="form-label text-center">CLUB COLORS</label>
+      <input type="text" class="form-control" name="clubColors" id="inputEmail3">
+    </div>
+
+    <div class="col-6 mb-3">
+      <label for="inputEmail3" class="form-label text-center">VENUE</label>
+      <input type="text" class="form-control" name="venue" id="inputEmail3">
+    </div>
+    <div class="col-6 mb-3">
+      <label for="inputEmail3" class="form-label text-center">LAST UPDATED</label>
+      <input type="text" class="form-control" name="lastUpdated" id="inputEmail3">
+    </div>
+
+    <div class="col-12 mb-3 d-flex justify-content-center">
+      <button type="submit" class="btn btn-primary btn-lg btn-block">Sign in</button>
+    </div>
+
+  </form>
+</div>
+
+

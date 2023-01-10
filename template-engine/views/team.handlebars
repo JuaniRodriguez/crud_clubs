@@ -1,0 +1,36 @@
+<div class="container d-flex justify-content-center">
+  <div class="card mb-3" id="card">
+    <div class="row g-0">
+      <div class="col-md-4 d-flex justify-content-center align-items-center">
+        <img src={{data.crestUrl}} class="img-fluid rounded-start " alt="..." id="image">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title text-center" id="cardTitle">{{data.name}}</h5>
+          <ul>
+            <li><b>Address:</b>{{data.address}}</li>
+            <li><b>Website:</b>{{data.website}}</li>
+            <li><b>Founded:</b>{{data.founded}}</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="container">
+    <div class="row d-flex justify-content-center">
+        <div class="col-md-10">
+            <table class="table table-bordered table-hover table-success border-light">
+                  <tr>
+                      <th scope="col" class="text-center col-sm-5">Nombre</th>
+                      <th scope="col" class="text-center col-sm-2">Posicion</th>
+                      <th scope="col" class="text-center col-sm-5">Pais</th>
+                  </tr>
+                  {{>playersList players=data.squad}}
+
+            </table>
+        </div>
+    </div>
+</div>    
