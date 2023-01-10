@@ -50,209 +50,22 @@ a:link {
 label {
     color: white;
 }
-/* style="max-width: 740px;"*/
 
+.fa-solid {
+  font-size: 50px;
+  color: white;
+}
 
-
-
-
-
-
-
-/*
-<form action="/form" method="POST">
+.icon-team {
+  margin-top: 20px;
+  margin-left: 20px;
   
-  <div class="row mb-3">
-    <label for="inputEmail3" class="col-sm-2 col-form-label text-center">ID</label>
-    <div class="col-auto">
-      <input type="number" class="form-control" name="id" id="inputEmail3">
-    </div>
-  </div>
-  <div class="row mb-3">
-    <label for="inputPassword3" class="col-sm-2 col-form-label text-center">AREA</label>
-    <div class="col-sm-1">
-      <input type="number" class="form-control" name="areaId" placeholder="id" id="inputPassword3">
-      <input type="text" class="form-control" name="areaName" placeholder="name" id="inputPassword3">
-    </div>
-  </div>
-  <div class="row mb-3">
-    <label for="inputEmail3" class="col-sm-2 col-form-label text-center">NAME</label>
-    <div class="col-sm-3">
-      <input type="text" class="form-control" name="name" id="inputEmail3">
-    </div>
-  </div>
-  <div class="row mb-3">
-    <label for="inputEmail3" class="col-sm-2 col-form-label text-center">SHORTNAME</label>
-    <div class="col-sm-2">
-      <input type="text" class="form-control" name="shortName" id="inputEmail3">
-    </div>
-  </div>
-  <div class="row mb-3">
-    <label for="inputEmail3" class="col-sm-2 col-form-label text-center">TLA</label>
-    <div class="col-sm-1">
-      <input type="text" class="form-control" name="tla" id="inputEmail3">
-    </div>
-  </div>
-  <div class="row mb-3">
-    <label for="inputEmail3" class="col-sm-2 col-form-label text-center">IMAGE</label>
-    <div class="col-sm-3">
-      <input type="text" class="form-control" name="crestUrl" id="inputEmail3">
-    </div>
-  </div>
-  <div class="row mb-3">
-    <label for="inputEmail3" class="col-sm-2 col-form-label text-center">ADDRESS</label>
-    <div class="col-sm-3">
-      <input type="text" class="form-control" name="address" id="inputEmail3">
-    </div>
-  </div>
-  <div class="row mb-3">
-    <label for="inputEmail3" class="col-sm-2 col-form-label text-center">PHONE</label>
-    <div class="col-sm-3">
-      <input type="text" class="form-control" name="phone" id="inputEmail3">
-    </div>
-  </div>
-  <div class="row mb-3">
-    <label for="inputEmail3" class="col-sm-2 col-form-label text-center">WEBSITE</label>
-    <div class="col-sm-3">
-      <input type="text" class="form-control" name="website" id="inputEmail3">
-    </div>
-  </div>
-  <div class="row mb-3">
-    <label for="inputEmail3" class="col-sm-2 col-form-label text-center">EMAIL</label>
-    <div class="col-sm-3">
-      <input type="email" class="form-control" name="email" id="inputEmail3">
-    </div>
-  </div>
-  <div class="row mb-3">
-    <label for="inputEmail3" class="col-sm-2 col-form-label text-center">FOUNDED</label>
-    <div class="col-sm-1">
-      <input type="number" class="form-control" name="founded" id="inputEmail3">
-    </div>
-  </div>
-    <div class="row mb-3">
-    <label for="inputEmail3" class="col-sm-2 col-form-label text-center">CLUB COLORS</label>
-    <div class="col-sm-3">
-      <input type="text" class="form-control" name="clubColors" id="inputEmail3">
-    </div>
-  </div>
-    <div class="row mb-3">
-    <label for="inputEmail3" class="col-sm-2 col-form-label text-center">VENUE</label>
-    <div class="col-sm-3">
-      <input type="text" class="form-control" name="venue" id="inputEmail3">
-    </div>
-  </div>
-    <div class="row mb-3">
-    <label for="inputEmail3" class="col-sm-2 col-form-label text-center">LAST UPDATED</label>
-    <div class="col-sm-3">
-      <input type="text" class="form-control" name="lastUpdated" id="inputEmail3">
-    </div>
-  </div>
-  
-  
-  <div class="row mb-3">
-    <div class="col-sm-10 offset-sm-2">
-      
-    </div>
-  </div>
-  <button type="submit" class="btn btn-primary">Sign in</button>
-</form>
-*/
+}
 
+.fa-solid:hover{
+  color: grey;
+}
 
-/*
-
-<div class="row mb-3">
-    <label for="inputEmail3" class="col-sm-2 col-form-label text-center">ID</label>
-    <div class="col-auto">
-      <input type="number" class="form-control" name="id" id="inputEmail3" value={{data.id}} disabled>
-    </div>
-  </div>
-  <div class="row mb-3">
-    <label for="inputPassword3" class="col-sm-2 col-form-label text-center">AREA</label>
-    <div class="col-sm-1">
-      <input type="number" class="form-control" name="areaId" placeholder="id" id="inputPassword3" value={{data.area.id}}>
-      <input type="text" class="form-control" name="areaName" placeholder="name" id="inputPassword3" value="{{data.area.name}}">
-    </div>
-  </div>
-  <div class="row mb-3">
-    <label for="inputEmail3" class="col-sm-2 col-form-label text-center">NAME</label>
-    <div class="col-sm-3">
-      <input type="text" class="form-control" name="name" id="inputEmail3" value="{{data.name}}" required>
-    </div>
-  </div>
-  <div class="row mb-3">
-    <label for="inputEmail3" class="col-sm-2 col-form-label text-center">SHORTNAME</label>
-    <div class="col-sm-2">
-      <input type="text" class="form-control" name="shortName" id="inputEmail3" value={{data.shortName}}>
-    </div>
-  </div>
-  <div class="row mb-3">
-    <label for="inputEmail3" class="col-sm-2 col-form-label text-center">TLA</label>
-    <div class="col-sm-1">
-      <input type="text" class="form-control" name="tla" id="inputEmail3" value={{data.tla}} required>
-    </div>
-  </div>
-  <div class="row mb-3">
-    <label for="inputEmail3" class="col-sm-2 col-form-label text-center">IMAGE</label>
-    <div class="col-sm-3">
-      <input type="text" class="form-control" name="crestUrl" id="inputEmail3" value={{data.crestUrl}}>
-    </div>
-  </div>
-  <div class="row mb-3">
-    <label for="inputEmail3" class="col-sm-2 col-form-label text-center" >ADDRESS</label>
-    <div class="col-sm-3">
-      <input type="text" class="form-control" name="address" id="inputEmail3" value="{{data.address}}">
-    </div>
-  </div>
-  <div class="row mb-3">
-    <label for="inputEmail3" class="col-sm-2 col-form-label text-center">PHONE</label>
-    <div class="col-sm-3">
-      <input type="text" class="form-control" name="phone" id="inputEmail3" value="{{data.phone}}">
-    </div>
-  </div>
-  <div class="row mb-3">
-    <label for="inputEmail3" class="col-sm-2 col-form-label text-center" >WEBSITE</label>
-    <div class="col-sm-3">
-      <input type="text" class="form-control" name="website" id="inputEmail3" value="{{data.website}}">
-    </div>
-  </div>
-  <div class="row mb-3">
-    <label for="inputEmail3" class="col-sm-2 col-form-label text-center">EMAIL</label>
-    <div class="col-sm-3">
-      <input type="email" class="form-control" name="email" id="inputEmail3" value="{{data.email}}">
-    </div>
-  </div>
-  <div class="row mb-3">
-    <label for="inputEmail3" class="col-sm-2 col-form-label text-center" >FOUNDED</label>
-    <div class="col-sm-1">
-      <input type="number" class="form-control" name="founded" id="inputEmail3" value="{{data.founded}}">
-    </div>
-  </div>
-    <div class="row mb-3">
-    <label for="inputEmail3" class="col-sm-2 col-form-label text-center">CLUB COLORS</label>
-    <div class="col-sm-3">
-      <input type="text" class="form-control" name="clubColors" id="inputEmail3" value="{{data.clubColors}}">
-    </div>
-  </div>
-    <div class="row mb-3">
-    <label for="inputEmail3" class="col-sm-2 col-form-label text-center">VENUE</label>
-    <div class="col-sm-3">
-      <input type="text" class="form-control" name="venue" id="inputEmail3" value="{{data.venue}}">
-    </div>
-  </div>
-    <div class="row mb-3">
-    <label for="inputEmail3" class="col-sm-2 col-form-label text-center">LAST UPDATED</label>
-    <div class="col-sm-3">
-      <input type="text" class="form-control" name="lastUpdated" id="inputEmail3" value="{{data.lastUpdated}}">
-    </div>
-  </div>
-  
-  
-  <div class="row mb-3">
-    <div class="col-sm-10 offset-sm-2">
-      
-    </div>
-  </div>
-  <button type="submit" class="btn btn-primary">Sign in</button>
-</form>
-*/
+#container-team {
+  margin-top: -50px;
+}

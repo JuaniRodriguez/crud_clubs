@@ -1,11 +1,10 @@
-<!--enctype="multipart/form-data"-->
-<!-- enctype="multipart/form-data" es lo que nos permite subir un archivo al servidor -->
-
 {{#if data.error}}
   <div class="alert alert-primary" role="alert">
     {{data.error}}
   </div>
 {{/if}}
+
+<div class="icon-team"><a href="/"><i class="fa-solid fa-house"></i></a></div>
 
 <div class="container">
   <form class="row" action="/form" method="POST" enctype="multipart/form-data">

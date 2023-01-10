@@ -1,8 +1,10 @@
+<div class="icon-team"><a href="/"><i class="fa-solid fa-house"></i></a></div>
+
 <div class="container">
   <form class="row" action='/:tla/edit' method="POST" enctype="multipart/form-data">
       <div class="col-6 mb-3">
           <label for="inputEmail3" class="form-label text-center">ID</label>
-          <input type="number" class="form-control" name="id" id="inputEmail3"  value={{data.id}} disabled>
+          <input type="number" class="form-control" name="id" id="inputEmail3" readonly="readonly"  value={{data.id}}>
       </div>
       <div class="col-6 mb-3">
           <label for="inputPassword3" class="form-label text-center">AREA</label>
@@ -29,7 +31,7 @@
         <div class="row">
           <div class="col-2">
             <label for="inputEmail3" class="form-label text-center">TLA</label>
-            <input type="text" class="form-control" name="tla" id="inputEmail3" value={{data.tla}} required>
+            <input type="text" class="form-control" name="tla" id="inputEmail3" value={{data.tla}} readonly="readonly">
           </div>
           <div class="col">
             <label for="inputEmail3" class="form-label text-center">UPLOAD IMAGE</label>

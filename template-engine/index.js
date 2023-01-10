@@ -8,7 +8,7 @@ const exphbs=require('express-handlebars');
 const path=require("path");
 const Handlebars = require("handlebars");
 
-const puerto=8080;
+const puerto=8000;
 const app=express();
 const hbs=exphbs.create();
 
@@ -34,8 +34,7 @@ const storage = multer.diskStorage({
 const upload = multer({ storage: storage });
 
 function newTeam(team,file) {
-  //necesito esta funcion porque el form me devuelve un objeto, pero "area" es otro objeto dentro de objeto.
-  console.log(file)
+
   const newTeam= {
     id:team.id,
     area: {
@@ -45,7 +44,7 @@ function newTeam(team,file) {
     name:team.name,
     shortName:team.shortName,
     tla:team.tla,
-    crestUrl:  (file==="crest") ? team.urlImage : `/imagenes/${file}`,/*(team.uploadedImage!=="") ? `/imagenes/${team.file.originalname}` : team.urlImage,*/
+    crestUrl:  (file==="crest") ? team.urlImage : `/imagenes/${file}`,
     address:team.address,
     phone:team.phone,
     website:team.website,
@@ -75,8 +74,7 @@ app.get('/',(req,res)=> {
     equipos,
   })
 })
-//el metodo filter devuelve todo lo que sea true de lo que evalua. Formalmente:
-//The filter() method takes a callback parameter, and returns an array containing all values that the callback returned true for. 
+
 app.get('/:tla/ver',(req,res)=> {
   const equipos=JSON.parse(fs.readFileSync('./data/equipos.db.json'));
   const equipo=equipos.filter(equipo=>equipo.tla==`${req.params['tla']}`)
@@ -135,10 +133,8 @@ app.post('/form', upload.single('uploadedImage'),(req,res)=> {
 
 app.get('/:tla/edit',(req,res)=> {
   const equipos=JSON.parse(fs.readFileSync('./data/equipos.db.json'));
-
   const equipo=equipos.filter(equipo=>equipo.tla==`${req.params['tla']}`);
-  console.log(equipo)
-  console.log(equipo[0].name)
+
   res.render('editForm', {
     layout:'ui',
     data: {
@@ -169,7 +165,6 @@ app.post('/:tla/edit', upload.single('uploadedImage'),(req,res)=> {
 
   const equipos=JSON.parse(fs.readFileSync('./data/equipos.db.json'));
   const equiposRestantes=equipos.filter(equipo=>equipo.tla!==`${req.body.tla}`);
-  //fs.writeFileSync('./data/equipos.db.json',JSON.stringify(equiposRestantes));
   equiposRestantes.push(newTeam(req.body,(req.file!==undefined) ? req.file.filename : "crest"));
   fs.writeFileSync('./data/equipos.db.json',JSON.stringify(equiposRestantes));
   res.redirect('/')
